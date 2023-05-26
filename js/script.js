@@ -19,19 +19,24 @@ console.log(seniorPrice)
 
 // Kilometers check
 const userKM = parseInt(prompt("Inserire il numero di chilometri" ,"50"))
-document.getElementById("kmts").innerText = ("La tua tratta in chilometri = " + userKM)
+console.log(typeof userKM)
 
 
 // Age Check
 const userAge = parseInt(prompt("Inserire l'età del passeggero", "25"))
-document.getElementById("age").innerText = ("La tua età = " + userAge)
+console.log(typeof userAge)
 
 // ! VALIDATION
-if (!userKM >= 0 && userAge >= 0){
+if (isNaN(userKM) ||  isNaN(userAge) || userKM < 1 || userAge < 1) {
     alert("dati non corretti")
 }
 
+else {
 
+
+// Insert permanent MOD target 
+    document.getElementById("age").innerText = ("La tua età = " + userAge)
+    document.getElementById("kmts").innerText = ("La tua tratta in chilometri = " + userKM)
 // Calcolo del prezzo standard
 const standardPrice = (userKM * 0.21)
 
@@ -39,7 +44,7 @@ const standardPrice = (userKM * 0.21)
 
 // Calcolo dello sconto  e del prezzo finale
 let discountYoungPrice
-let discountSeniorprice
+let discountSeniorPrice
 let finalPrice
 if (userAge < 18) {
     discountYoungPrice = standardPrice * 20 / 100
@@ -62,7 +67,9 @@ document.getElementById("price").innerText = ("Questo sarebbe stato il costo del
 }
 else{
     console.log(standardPrice.toFixed(2))
-    document.getElementById("noDiscount").innerText= ("Spiacente, non hai diritto ad uno sconto, il tuo costo è di € " + standardPrice.toFixed(2))
+    document.getElementById("noDiscount").innerText= ("Spiacente, non hai diritto ad uno sconto, il tuo costo è di €" + standardPrice.toFixed(2))
+}
+
 }
 
 

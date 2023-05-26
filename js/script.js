@@ -27,15 +27,20 @@ if (userAge < 18) {
     // Calcolo prezzo finale 
     finalPrice = (standardPrice - discountYoungPrice)
     console.log(finalPrice.toFixed(2))
+    document.getElementById("target").innerText = (finalPrice.toFixed(2))
+
 }
 else if (userAge > 65) {
     discountSeniorPrice = standardPrice * 40 / 100
     finalPrice = (standardPrice - discountSeniorPrice)
     console.log(finalPrice.toFixed(2))
+    document.getElementById("target").innerText = (finalPrice.toFixed(2))
+
 
 }
 else{
     console.log(standardPrice.toFixed(2))
+    document.getElementById("target").innerText = (finalPrice.toFixed(2))
 }
 
 

@@ -22,9 +22,9 @@ va applicato uno sconto del 40% per gli over 65.
 - Controllo console
 - Salvare il dato in una variabile.
 
-3- Calcolo del prezzo totale originario:
+3- Calcolo del prezzo totale:
 
-- alla tarifa di 0.21€/km
+- alla tariffa di 0.21€/km
 - con sconto del 20% agli under 18
 - con sconto del 40% agli over 65
 

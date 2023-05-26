@@ -15,24 +15,27 @@ const userAge = parseInt(prompt("Inserire l'età del passeggero", "25"))
 
 
 // Calcolo del prezzo standard
-const  standardPrice = (userKM * 0.21)
+const standardPrice = (userKM * 0.21)
 
-// Calcolo dello sconto 
+
+// Calcolo dello sconto  e del prezzo finale
 let discountYoungPrice
 let discountSeniorprice
 let finalPrice
 if (userAge < 18) {
     discountYoungPrice = standardPrice * 20 / 100
+    // Calcolo prezzo finale 
     finalPrice = (standardPrice - discountYoungPrice)
-  console.log(finalPrice)
+    console.log(finalPrice.toFixed(2))
 }
 else if (userAge > 65) {
     discountSeniorPrice = standardPrice * 40 / 100
     finalPrice = (standardPrice - discountSeniorPrice)
-    console.log(finalPrice)
+    console.log(finalPrice.toFixed(2))
 
 }
 else{
-    console.log(standardPrice)
+    console.log(standardPrice.toFixed(2))
 }
+
 

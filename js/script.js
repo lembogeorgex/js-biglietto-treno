@@ -7,6 +7,10 @@ document.getElementById("price")
 document.getElementById("youngPrice");
 document.getElementById("seniorPrice");
 document.getElementById("noDiscount");
+document.getElementById("kmts");
+document.getElementById("age");
+
+
 
 console.log(price)
 console.log(youngPrice)
@@ -15,9 +19,12 @@ console.log(seniorPrice)
 
 // Kilometers check
 const userKM = parseInt(prompt("Inserire il numero di chilometri" ,"50"))
+document.getElementById("kmts").innerText = ("La tua tratta in chilometri = " + userKM)
+
 
 // Age Check
 const userAge = parseInt(prompt("Inserire l'età del passeggero", "25"))
+document.getElementById("age").innerText = ("La tua età = " + userAge)
 
 
 
@@ -37,6 +44,7 @@ if (userAge < 18) {
     console.log(finalPrice.toFixed(2))
     document.getElementById("youngPrice").innerText = ("Congratulazioni, hai diritto ad uno sconto del 20%! Il tuo prezzo finale è di €" + finalPrice.toFixed(2))
 document.getElementById("price").innerText = ("Questo sarebbe stato il costo del tuo ticket senza lo sconto: €" + standardPrice.toFixed(2));
+
 
 }
 else if (userAge > 65) {

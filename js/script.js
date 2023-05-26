@@ -26,6 +26,10 @@ document.getElementById("kmts").innerText = ("La tua tratta in chilometri = " + 
 const userAge = parseInt(prompt("Inserire l'età del passeggero", "25"))
 document.getElementById("age").innerText = ("La tua età = " + userAge)
 
+// ! VALIDATION
+if (!userKM >= 0 && userAge >= 0){
+    alert("dati non corretti")
+}
 
 
 // Calcolo del prezzo standard

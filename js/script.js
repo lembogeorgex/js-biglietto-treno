@@ -15,6 +15,10 @@ document.getElementById("age");
 console.log(price)
 console.log(youngPrice)
 console.log(seniorPrice)
+console.log(noDiscount)
+console.log(kmts)
+console.log(age)
+
 
 
 // Kilometers check
@@ -27,7 +31,7 @@ const userAge = parseInt(prompt("Inserire l'età del passeggero", "25"))
 console.log(typeof userAge)
 
 // ! VALIDATION
-if (isNaN(userKM) ||  isNaN(userAge) || userKM < 1 || userAge < 1) {
+if (isNaN(userKM) ||  isNaN(userAge) || userKM <= 0 || userAge <= 0) {
     alert("dati non corretti")
 }
 
@@ -46,7 +50,7 @@ const standardPrice = (userKM * 0.21)
 let discountYoungPrice
 let discountSeniorPrice
 let finalPrice
-if (userAge < 18) {
+if (userAge <= 18) {
     discountYoungPrice = standardPrice * 20 / 100
     // Calcolo prezzo finale 
     finalPrice = (standardPrice - discountYoungPrice)
@@ -56,7 +60,7 @@ document.getElementById("price").innerText = ("Questo sarebbe stato il costo del
 
 
 }
-else if (userAge > 65) {
+else if (userAge >= 65) {
     discountSeniorPrice = standardPrice * 40 / 100
     finalPrice = (standardPrice - discountSeniorPrice)
     console.log(finalPrice.toFixed(2))
